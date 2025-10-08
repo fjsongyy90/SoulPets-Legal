@@ -50,4 +50,4 @@ SoulPets 采用“免费增值”模式。
 
 ### 联系我们
 
-如果你对本条款有任何疑问，请通过以下方式联系我们：**[soulpetsapp@gmail.com]**
+如果你对本条款有任何疑问，请通过以下方式联系我们：**[support@soulpets.app]**

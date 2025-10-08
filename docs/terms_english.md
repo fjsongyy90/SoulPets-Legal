@@ -50,4 +50,4 @@ These Terms shall be governed by the laws of **[Your Jurisdiction, e.g., "the St
 
 ### Contact Us
 
-If you have any questions about these Terms, please contact us at: **[soulpetsapp@gmail.com]**
+If you have any questions about these Terms, please contact us at: **[support@soulpets.app]**
