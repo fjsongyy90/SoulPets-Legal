@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulPets - The digital heartbeat of your bond with pets.</title>
+    <meta name="description" content="SoulPets is a private, secure, and beautiful iOS app to help you record, remind, and cherish every moment with your pets. Your data never leaves your device.">
+    
+    <link rel="icon" href="app-icon.svg" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #FDFBF8;
+            --primary-color: #E5B487;
+            --text-color: #4A4A4A;
+            --heading-color: #333333;
+            --card-bg: #FFFFFF;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+        .app-store-badge-nav {
+            display: inline-block;
+            height: 40px;
+            transition: transform 0.2s;
+        }
+        .app-store-badge-nav:hover {
+            transform: scale(1.05);
+        }
+        .app-store-badge-nav img {
+            height: 100%;
+        }
+
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 60px 0 80px 0;
+            text-align: left;
+        }
+        .hero-content {
+            flex: 1.1;
+        }
+        .hero-image-container {
+            flex: 0.9;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            color: var(--heading-color);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+        .app-store-badge-main {
+            display: inline-block;
+            height: 50px;
+            transition: transform 0.2s;
+        }
+        .app-store-badge-main:hover {
+            transform: scale(1.05);
+        }
+        .app-store-badge-main img {
+            height: 100%;
+        }
+        .hero-image-container img {
+            max-width: 100%;
+            max-height: 700px; 
+            height: auto;
+            border-radius: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Features Section --- */
+        .features {
+            padding: 60px 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+            gap: 60px;
+        }
+        .feature-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .feature-text {
+            flex: 1;
+        }
+        .feature-text h3 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+        }
+        .feature-image {
+            flex: 1;
+            text-align: center;
+        }
+        .feature-image img {
+            max-width: 100%;
+            max-height: 700px;
+            border-radius: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Promise Section --- */
+        .promise {
+            background-color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .promise h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--heading-color);
+            margin-bottom: 40px;
+        }
+        .promise-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .promise-card {
+            background-color: var(--bg-color);
+            padding: 30px;
+            border-radius: 20px;
+            flex-basis: 30%;
+            min-width: 280px;
+        }
+        .promise-card h4 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 0;
+        }
+
+        /* --- CTA Section --- */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--heading-color);
+            margin-bottom: 30px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 820px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 40px;
+            }
+            .hero-content {
+                margin-bottom: 40px;
+            }
+            .hero h1 { font-size: 38px; }
+            .hero h2 { font-size: 18px; }
+
+            .feature-item, .feature-item:nth-child(even) {
+                flex-direction: column;
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header class="container">
+        <nav>
+            <a href="#" class="logo">
+                <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/logo/logo_any.svg" alt="SoulPets App Icon" class="logo-icon">
+                SoulPets
+            </a>
+            <a href="#" class="app-store-badge-nav" target="_blank">
+                <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>A Digital Heartbeat for Your Pet.</h1>
+                <h2>--Your pet's data never leaves your device.</h2>
+                <p class="hero-description">
+                    A private, secure, and beautiful space to record, remind, and cherish every moment of your pet's life.
+                </p>
+                <a href="#" class="app-store-badge-main" target="_blank">
+                    <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store">
+                </a>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/appStore/screen/screen-1.png" alt="SoulPets App Home Screen">
+            </div>
+        </section>
+
+        <section class="features container">
+            
+            <div class="feature-item">
+                <div class="feature-image">
+                     <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/appStore/screen/screen-2.png" alt="SoulPets Records Timeline">
+                </div>
+                <div class="feature-text">
+                    <h3>Every Moment, Beautifully Logged.</h3>
+                    <p>From daily meals to important vet visits, create a rich, visual timeline of your pet's life. Our elegant card-based design makes every entry a joy to look back on, complete with photos, notes, and tags.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>Never Miss a Moment of Care.</h3>
+                    <p>Our powerful and flexible reminder system ensures you're always on top of your pet's needs. Set recurring schedules for vaccines, deworming, or even buying supplies, and let SoulPets handle the rest.</p>
+                </div>
+                <div class="feature-image">
+                     <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/appStore/screen/screen-3.png" alt="SoulPets Smart Reminders">
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>Track Their Health at a Glance.</h3>
+                    <p>Monitor your pet's well-being with our intuitive weight tracker. Visualize trends with beautiful charts, set health goals, and get a clear picture of their progress over time. It’s proactive care, simplified.</p>
+                </div>
+                <div class="feature-image">
+                     <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/appStore/screen/screen-4.png" alt="SoulPets Weight Tracking Chart">
+                </div>
+            </div>
+
+             <div class="feature-item">
+                <div class="feature-text">
+                    <h3>Fill Their Story with Cuteness.</h3>
+                    <p>We believe recording should be fun. Our charming, hand-drawn tag icons cover every aspect of pet life, turning a simple log into a delightful expression of your love and care.</p>
+                </div>
+                <div class="feature-image">
+                     <img src="/Users/songyouyong/Documents/work/SoulPets/标签插画/appStore/screen/screen-5.png" alt="SoulPets Cute Tag Icons">
+                </div>
+            </div>
+        </section>
+        
+        <section class="promise">
+            <div class="container">
+                <h2>Our Core Philosophy</h2>
+                <div class="promise-cards">
+                    <div class="promise-card">
+                        <h4>Privacy First, Always.</h4>
+                        <p>We built SoulPets on a foundation of trust. Your data is 100% yours, stored only on your device and synced via your private iCloud. No accounts, no tracking, no servers. It's our unbreakable promise to you.</p>
+                    </div>
+                    <div class="promise-card">
+                        <h4>Pure Native Experience.</h4>
+                        <p>Crafted with pure SwiftUI and SwiftData, SoulPets feels right at home on your iPhone. It's fast, fluid, and follows Apple's Human Interface Guidelines to ensure an intuitive and seamless experience.</p>
+                    </div>
+                    <div class="promise-card">
+                        <h4>Emotional by Design.</h4>
+                        <p>We believe technology should feel warm. From the gentle color palette to the healing illustrations, every pixel is designed to bring you a sense of comfort, joy, and connection with your beloved pet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta container">
+            <h2>Ready to Start Their Journey?</h2>
+            <p>Give your bond the digital heartbeat it deserves. <br>Download SoulPets today and start creating a beautiful history together.</p>
+             <a href="#" class="app-store-badge-main" target="_blank" style="margin-top: 20px;">
+                <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store">
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:support@soulpets.app">Support</a>
+                <a href="mailto:hello@soulpets.app">Contact Us</a>
+                <a href="https://legal.soulpets.app/privacy/en" target="_blank">Privacy Policy</a>
+                <a href="https://legal.soulpets.app/terms/en" target="_blank">Terms of Service</a>
+            </div>
+            <p class="copyright">© <span id="copyright-year"></span> SoulPets. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
