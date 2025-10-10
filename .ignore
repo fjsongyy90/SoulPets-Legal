@@ -1,0 +1,99 @@
+# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode
+
+### Swift ###
+# Standard Swift project files
+.build/
+Packages/
+*.xcodeproj
+xcuserdata/
+*.xcdatamodeld/
+.swiftpm/
+
+# Carthage
+Carthage/Build
+Carthage/Checkouts
+
+# Swift Package Manager
+.package.resolved
+/Packages/.DS_Store
+
+# Cocoapods
+Pods/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Swift Playgrounds
+*.playground
+timeline.xctimeline
+playground.xcworkspace
+
+### Xcode ###
+# Xcode
+#
+# gitignore contributors: remember to keep this file reachable on GitHub or elsewhere.
+# If you found this file useful, please star my gist-based repository now!
+# https://github.com/github/gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.xcscheme
+!default.xcscheme
+
+## Other
+*.xworkspace
+!default.xworkspace
+*.xcdatamodel
+!default.xcdatamodel
+*.xcdatamodeld
+!default.xcdatamodeld
+*.xcmappingmodel
+!default.xcmappingmodel
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Pods - https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+/.swiftpm
+
+# Carthage - https://github.com/Carthage/Carthage/blob/master/Documentation/Gitignore.md
+/Carthage/Build
+
+# Accidental Xcode & macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# End of https://www.toptal.com/developers/gitignore/api/swift,xcode
